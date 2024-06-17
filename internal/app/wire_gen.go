@@ -21,8 +21,6 @@ import (
 	"github.com/liuzhaomax/ovo-user/src/api_user/business"
 	"github.com/liuzhaomax/ovo-user/src/api_user/handler"
 	"github.com/liuzhaomax/ovo-user/src/api_user/model"
-	business2 "github.com/liuzhaomax/ovo-user/src/api_user_rpc/business"
-	model2 "github.com/liuzhaomax/ovo-user/src/api_user_rpc/model"
 )
 
 // Injectors from wire.go:
@@ -115,20 +113,9 @@ func InitInjector() (*Injector, func(), error) {
 		ValidatorRPC: validatorRPC,
 		TracingRPC:   tracingRPC,
 	}
-	modelModelUser := &model2.ModelUser{
-		DB: db,
-	}
-	businessBusinessUser := &business2.BusinessUser{
-		Model:    modelModelUser,
-		Tx:       trans,
-		Redis:    client,
-		IRes:     response,
-		RocketMQ: rocketMQ,
-	}
 	handlerRPC := &api.HandlerRPC{
 		PrometheusRegistry: registry,
 		MiddlewareRPC:      middlewareRPC,
-		BusinessRPC:        businessBusinessUser,
 	}
 	injectorRPC := InjectorRPC{
 		HandlerRPC: handlerRPC,
