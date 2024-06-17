@@ -1,4 +1,4 @@
-module github.com/liuzhaomax/go-maxms
+module github.com/liuzhaomax/ovo-user
 
 go 1.21.4
 

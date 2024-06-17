@@ -3,7 +3,7 @@ package imposter
 import (
 	"flag"
 	"fmt"
-	"github.com/liuzhaomax/go-maxms/internal/core"
+	"github.com/liuzhaomax/ovo-user/internal/core"
 	"github.com/spf13/viper"
 	"log"
 	"testing"

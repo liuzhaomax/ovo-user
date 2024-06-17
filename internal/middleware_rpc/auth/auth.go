@@ -3,7 +3,7 @@ package auth
 import (
 	"context"
 	"github.com/google/wire"
-	"github.com/liuzhaomax/go-maxms/internal/core"
+	"github.com/liuzhaomax/ovo-user/internal/core"
 	"github.com/pkg/errors"
 	"github.com/redis/go-redis/v9"
 	"google.golang.org/grpc"

@@ -1,5 +1,5 @@
 app:
-  name: go-maxms
+  name: ovo-user
   version: 0.1
   domain: liuzhaomax.cn
   enabled:
@@ -86,10 +86,3 @@ server:
   write_timeout: 10
   idle_timeout: 15
   shutdown_timeout: 10
-
-downstreams:
-  - name: go-maxms-be
-    endpoint:
-      host: 172.16.96.98
-      port: 9801
-

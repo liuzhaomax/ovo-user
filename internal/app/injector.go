@@ -3,7 +3,7 @@ package app
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/google/wire"
-	"github.com/liuzhaomax/go-maxms/internal/api"
+	"github.com/liuzhaomax/ovo-user/internal/api"
 	"github.com/redis/go-redis/v9"
 	"gorm.io/gorm"
 )

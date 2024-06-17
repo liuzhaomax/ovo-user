@@ -2,10 +2,10 @@ package api
 
 import (
 	"github.com/google/wire"
-	"github.com/liuzhaomax/go-maxms/internal/core"
-	"github.com/liuzhaomax/go-maxms/internal/middleware_rpc"
-	"github.com/liuzhaomax/go-maxms/src/api_user_rpc/business"
-	"github.com/liuzhaomax/go-maxms/src/api_user_rpc/pb"
+	"github.com/liuzhaomax/ovo-user/internal/core"
+	"github.com/liuzhaomax/ovo-user/internal/middleware_rpc"
+	"github.com/liuzhaomax/ovo-user/src/api_user_rpc/business"
+	"github.com/liuzhaomax/ovo-user/src/api_user_rpc/pb"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"google.golang.org/grpc"

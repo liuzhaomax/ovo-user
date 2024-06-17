@@ -2,8 +2,8 @@ package db_auto_migrate_user
 
 import (
 	"fmt"
-	"github.com/liuzhaomax/go-maxms/internal/core"
-	"github.com/liuzhaomax/go-maxms/src/api_user/model"
+	"github.com/liuzhaomax/ovo-user/internal/core"
+	"github.com/liuzhaomax/ovo-user/src/api_user/model"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/schema"

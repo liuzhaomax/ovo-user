@@ -5,11 +5,11 @@ package app
 
 import (
 	"github.com/google/wire"
-	"github.com/liuzhaomax/go-maxms/internal/api"
-	"github.com/liuzhaomax/go-maxms/internal/core"
-	"github.com/liuzhaomax/go-maxms/internal/middleware"
-	"github.com/liuzhaomax/go-maxms/internal/middleware_rpc"
-	"github.com/liuzhaomax/go-maxms/src/set"
+	"github.com/liuzhaomax/ovo-user/internal/api"
+	"github.com/liuzhaomax/ovo-user/internal/core"
+	"github.com/liuzhaomax/ovo-user/internal/middleware"
+	"github.com/liuzhaomax/ovo-user/internal/middleware_rpc"
+	"github.com/liuzhaomax/ovo-user/src/set"
 )
 
 func InitInjector() (*Injector, func(), error) {

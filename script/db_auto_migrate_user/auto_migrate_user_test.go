@@ -1,7 +1,7 @@
 package db_auto_migrate_user
 
 import (
-	"github.com/liuzhaomax/go-maxms/internal/core"
+	"github.com/liuzhaomax/ovo-user/internal/core"
 	"testing"
 )
 
