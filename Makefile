@@ -1,7 +1,7 @@
 SHELL = /bin/bash
 
-CONTRACT_URL=https://raw.githubusercontent.com/liuzhaomax/maxblog-devops/main/contracts/user.yaml
-CONTRACT_PATH=../spec/user.yaml
+CONTRACT_URL=https://raw.githubusercontent.com/liuzhaomax/go-maxms-template-devops/main/project/ovo/contract/user.proto
+CONTRACT_PATH=../spec/user.proto
 BUILT_FILE=bin/main
 TEST_INCLUSION=$(shell go list ./... | grep -Ewv 'main|test|internal|src/router|src/dataAPI/handler')
 API_ENV=local
