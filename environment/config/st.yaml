@@ -78,7 +78,7 @@ lib:
         port: 4545
 
 server:
-  protocol: rpc
+  protocol: http
   host: 172.16.96.98
   port: 9301
   base_url: /
