@@ -43,7 +43,7 @@ func MapUser2UserRes(user *model.User) (*UserRes, error) {
 	groupsAny, err := utils.Map(user.Groups, func(v any) (any, error) {
 		group, ok := v.(model.Group)
 		if !ok {
-			return "", errors.New(fmt.Sprintf("提取信息失败: %v", v))
+			return "", fmt.Errorf("提取信息失败: %v", v)
 		}
 		return group.Group, nil
 	})
@@ -75,7 +75,7 @@ func MapRole2RoleRes(role *model.Role) (*RoleRes, error) {
 	permissionAny, err := utils.Map(role.Permissions, func(v any) (any, error) {
 		permission, ok := v.(model.Permission)
 		if !ok {
-			return "", errors.New(fmt.Sprintf("mapping错误: 提取信息失败: %v", v))
+			return "", fmt.Errorf("mapping错误: 提取信息失败: %v", v)
 		}
 		return permission.Permission, nil
 	})

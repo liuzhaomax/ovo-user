@@ -101,6 +101,9 @@ func (b *BusinessUser) GetUserByUserID(c *gin.Context) (*schema.UserRes, error) 
 	if err != nil {
 		return nil, err
 	}
-	userRes := schema.MapUser2UserRes(user)
+	userRes, err := schema.MapUser2UserRes(user)
+	if err != nil {
+		return nil, err
+	}
 	return userRes, nil
 }

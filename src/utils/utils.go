@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"errors"
 	"fmt"
 	"strconv"
 )
@@ -24,7 +23,7 @@ func Map[T any](arr []T, fn func(any) (any, error)) ([]T, error) { // Map后面�
 		if err != nil {
 			return arr, err
 		}
-		result[i] = res
+		result[i] = res.(T)
 	}
 	return result, nil
 }
@@ -34,7 +33,7 @@ func Any2String[T any](slice []T) ([]string, error) {
 	for i, v := range slice {
 		str, ok := any(v).(string)
 		if !ok {
-			return result, errors.New(fmt.Sprintf("any转string失败: %v", v))
+			return result, fmt.Errorf("any转string失败: %v", v)
 		}
 		result[i] = str
 	}
