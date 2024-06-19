@@ -22,8 +22,8 @@ type UserRes struct {
 }
 
 type RoleRes struct {
-	Role       string   `json:"role"`
-	Permission []string `json:"permission"`
+	Role        string   `json:"role"`
+	Permissions []string `json:"permission"`
 }
 
 type GroupRes struct {
@@ -72,7 +72,7 @@ func MapRole2RoleRes(role *model.Role) (*RoleRes, error) {
 	if role.DeletedAt.Valid {
 		return nil, nil
 	}
-	permissionAny, err := utils.Map(role.Permissions, func(v any) (any, error) {
+	permissionsAny, err := utils.Map(role.Permissions, func(v any) (any, error) {
 		permission, ok := v.(model.Permission)
 		if !ok {
 			return "", fmt.Errorf("mapping错误: 提取信息失败: %v", v)
@@ -82,13 +82,13 @@ func MapRole2RoleRes(role *model.Role) (*RoleRes, error) {
 	if err != nil {
 		return nil, fmt.Errorf("mapping错误: %v", err)
 	}
-	permissionStr, err := utils.Any2String(permissionAny)
+	permissionsStr, err := utils.Any2String(permissionsAny)
 	if err != nil {
 		return nil, errors.New("mapping错误: any转string失败")
 	}
 	return &RoleRes{
-		Role:       role.Role,
-		Permission: permissionStr,
+		Role:        role.Role,
+		Permissions: permissionsStr,
 	}, nil
 }
 
